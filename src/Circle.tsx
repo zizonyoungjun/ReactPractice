@@ -35,4 +35,3 @@ const sayHello = (playerobj : PlayerShape) =>
     `Hello ${playerobj.name} you are ${playerobj.age} years old`;
 
 
-sayHello({name:'yj', age: 25})
