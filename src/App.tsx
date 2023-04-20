@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Circle from "./Circle";
 
 const Title = styled.h1`
   color: ${(props) => props.theme.textColor};
@@ -17,6 +18,7 @@ function App() {
   return (
     <Wrapper>
       <Title>Hello</Title>
+      <Circle bgColor="teal" />
     </Wrapper>
   );
 }
