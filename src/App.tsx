@@ -1,25 +1,21 @@
+import { useState } from "react";
 import styled from "styled-components";
-import Circle from "./Circle";
 
-const Title = styled.h1`
-  color: ${(props) => props.theme.textColor};
-`;
-
-const Wrapper = styled.div`
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  background-color: ${(props) => props.theme.backgroundColor};
-`;
 
 function App() {
+  const[username, setUsername] = useState("")
+  const onChange = (event: React.FormEvent<HTMLInputElement>) => {
+    setUsername(event.currentTarget.value)
+  }
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  }
   return (
-    <Wrapper>
-      <Title>Hello</Title>
-      <Circle bgColor="teal" />
-    </Wrapper>
+  <div>
+    <form onSubmit={onSubmit}>
+      <input value={username} onChange={onChange} type="text" placeholder="user name" />
+    </form>
+  </div>
   );
 }
 
