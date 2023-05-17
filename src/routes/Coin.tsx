@@ -1,10 +1,6 @@
 import React from 'react';
 import {useParams} from "react-router";
 
-interface RouteParams {
-    coinId: string;
-}
-
 function Coin() {
     const{ coinId } = useParams();
     return (
